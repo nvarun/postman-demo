@@ -9,6 +9,7 @@ id = 372da7aa-f1eb-4dd7-926e-374b68dad46a
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"30854979-5eae6379-e034-47f1-8960-b39759cfee12","path":"Pluralsight Course - Postman 8 Fundamentals.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
