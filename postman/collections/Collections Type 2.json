@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "5eae6379-e034-47f1-8960-b39759cfee12",
-		"name": "Pluralsight Course - Postman 8 Fundamentals",
+		"_postman_id": "a248edd8-5fb5-42b9-8d1e-5becba32c6bc",
+		"name": "Collections Type 2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "30854979-5eae6379-e034-47f1-8960-b39759cfee12"
+		"_uid": "30854979-a248edd8-5fb5-42b9-8d1e-5becba32c6bc"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b5592e4a-9b30-4547-8bd9-8db7bda545af",
+						"id": "2e85bbe4-1682-437c-aac9-a1e4763650b2",
 						"exec": [
 							"// pm.test(\"Return N books\", function(){\r",
 							"//     const books = pm.response.json()\r",
@@ -40,7 +40,7 @@
 					}
 				}
 			],
-			"id": "f1d72716-c72c-457a-b7c4-c1776d31dc27",
+			"id": "1bcd0a15-7e91-4ac8-936d-d9da64af9c61",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -77,7 +77,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "25164a2d-e707-4113-b77c-e1d132a3209f",
+						"id": "7cf360c6-7b74-41b4-8ddb-6089492633b1",
 						"exec": [
 							"pm.globals.set(\"householdId\", pm.response.json().id);"
 						],
@@ -85,7 +85,7 @@
 					}
 				}
 			],
-			"id": "b6e360bc-d6cb-431a-9f08-bbefba1ab8d4",
+			"id": "70bee32c-5c1e-4cc5-9758-c464f855897d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -125,7 +125,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a83df833-f909-40cc-bd38-efce72ec9705",
+						"id": "17ac0299-9ec3-4bef-8fb2-65eed88d3ab8",
 						"exec": [
 							"pm.globals.set(\"firstWishlistId\", pm.response.json().wishlistId);"
 						],
@@ -133,7 +133,7 @@
 					}
 				}
 			],
-			"id": "37323ceb-f2ff-44da-97ab-b282de21211f",
+			"id": "4e1cc68e-65a9-40f4-a876-5ea9deed2b49",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -168,56 +168,8 @@
 			"response": []
 		},
 		{
-			"name": "Create Another User Request - Pluralsight Course",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "79aa6015-099c-4a1a-8cdb-7b953f3ab117",
-						"exec": [
-							"pm.globals.set(\"secondWishlistId\", pm.response.json().wishlistId);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "a66b156d-a650-4f8d-8bd6-4bbd1d44a6d2",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "G-TOKEN",
-						"value": "ROM831ESV",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"ZZZ\",\r\n    \"firstName\": \"Shilpi\",\r\n    \"lastName\": \"Parashar\",\r\n    \"householdId\": {{householdId}}\r\n}"
-				},
-				"url": {
-					"raw": "{{host}}/users",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Add Book to User Request - Pluralsight Course",
-			"id": "873d712b-c4e5-4620-b73e-877898828859",
+			"id": "e1344916-cba3-4fcf-937d-a6127db2bc33",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -236,7 +188,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{host}}/wishlists/{{firstWishlistId}}/books/1",
+					"raw": "{{host}}/wishlists/{{firstWishlistId}}/books/28",
 					"host": [
 						"{{host}}"
 					],
@@ -244,42 +196,7 @@
 						"wishlists",
 						"{{firstWishlistId}}",
 						"books",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Add Book to Another User Request - Pluralsight Course",
-			"id": "738a6efc-f96b-467d-be50-be97badca6b7",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "G-TOKEN",
-						"value": "ROM831ESV",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{host}}/wishlists/{{secondWishlistId}}/books/1",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"wishlists",
-						"{{secondWishlistId}}",
-						"books",
-						"1"
+						"28"
 					]
 				}
 			},
@@ -287,7 +204,7 @@
 		},
 		{
 			"name": "Wishlist Books Endpoint - Pluralsight Course",
-			"id": "70c9f2ee-ae82-4f7b-b38d-31e1a12db663",
+			"id": "5987298b-8055-41ff-a9da-7bc0647755b5",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -325,7 +242,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "20ab2a59-cbc3-41af-9e84-335e3186d261",
+				"id": "7d69b11d-e434-42e1-a01e-4e3dce9262c9",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -335,7 +252,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "92d427e5-85f5-4931-8b6c-3fc62fe099aa",
+				"id": "2d163154-2a15-43eb-b6fe-172759b1769b",
 				"type": "text/javascript",
 				"exec": [
 					"pm.test(\"Status code is either 200, 201 or 204\", function () {",
